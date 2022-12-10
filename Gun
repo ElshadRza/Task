@@ -1,0 +1,76 @@
+Console.WriteLine($"1.Fire one bullet at a time." +
+    $"\n2.Fire all the bullets. " +
+    $"\n3.Reload" +
+    $"\n4.Exit the game" +
+    $"\n5.Show how many bullets are left.");
+int gun = Convert.ToInt32(Console.ReadLine());
+
+int bullet = 1;
+
+int bulletsum = 30;
+
+while (gun > 0 || gun < 6) 
+
+{
+    
+
+
+    while (gun == 1 && bulletsum>0)
+
+    {
+        Console.WriteLine($"You have {bulletsum = bulletsum - bullet} bullets left.");
+        gun = Convert.ToInt32(Console.ReadLine());
+        
+    }
+
+    while(gun == 2)
+    {
+        Console.WriteLine("You fired all the bullets.");
+        while (bulletsum >= 0)
+        {
+            Console.WriteLine(bulletsum --);
+            
+        }
+        gun = Convert.ToInt32(Console.ReadLine());
+    }
+
+
+    while (gun == 3)
+    {
+        Console.WriteLine("You reloaded the gun.You now have 30 bullets.");
+        bulletsum = 30;
+        gun = Convert.ToInt32(Console.ReadLine());
+    }
+
+    if (gun == 4)
+    {
+        Console.WriteLine("You quit the game.");
+        break;
+    }
+
+
+    while (gun == 5)
+    {
+        Console.WriteLine($"You have {bulletsum} bullets.");
+        gun = Convert.ToInt32(Console.ReadLine());
+        
+    }
+
+} 
+while (gun < 0 || gun > 5)
+{
+    Console.WriteLine("Please write down a correct number!");
+    gun = Convert.ToInt32(Console.ReadLine());
+
+}
+
+
+
+
+
+
+
+
+
+
+
